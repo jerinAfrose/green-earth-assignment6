@@ -1,0 +1,18 @@
+@import "tailwindcss";
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.bg-img {
+  background-image: url("../assets/hero-leaf1.png"),
+    url(../assets/hero-leaf2.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, right bottom;
+  background-size: 500px auto, 500px auto;
+}
+
+@media (max-width: 768px) {
+  .bg-img {
+    background-image: none;
+  }
+}
