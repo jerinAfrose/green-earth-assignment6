@@ -102,10 +102,26 @@
         <h2 class="text-center mt-15 text-2xl font-semibold">
           Choose Your Trees
         </h2>
-
-        <div id="category-container" class="">
-          <h2>Categories</h2>
-          <button id="all-tree-btn">All Trees</button>
+        <div class="flex gap-2">
+          <!-- category container div -->
+          <div id="category-container" class="w-1/4">
+            <h2 class="font-semibold">Categories</h2>
+            <button
+              id="all-tree-btn"
+              class="w-full btn btn-outline border-none hover:bg-[#15803d] hover:text-white"
+            >
+              All Trees
+            </button>
+          </div>
+          <!-- plant card div -->
+          <div
+            id="plant-container"
+            class="w-1/2 grid grid-cols-1 md:grid-cols-3 gap-3"
+          ></div>
+          <!-- cart section sidebar -->
+          <div class="w-1/4 bg-white p-4">
+            <h2>Your Cart</h2>
+          </div>
         </div>
       </section>
       <!-- about campaign section -->
