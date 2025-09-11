@@ -76,9 +76,9 @@ const displayTrees = (trees) => {
   });
 };
 
-const displaySingleTree = (plants) => {
-  const singleTreeContainer = document.getElementById("plant-container");
-  // singleTreeContainer.innerHTML = "";
+const displaySingleTree = (plants, id) => {
+  const singleTreeContainer = document.getElementById(`plant-container-${id}`);
+  singleTreeContainer.innerHTML = "";
   plants.forEach((plant) => {
     const treeCard = document.createElement("div");
     treeCard.innerHTML = `
@@ -108,7 +108,7 @@ const displayCategory = (categoriess) => {
     // console.log(category);
     const categoryDiv = document.createElement("div");
     categoryDiv.innerHTML = `
-    <button onclick="loadSingleTree('${category.category_name}')" id="plant-container-${category.category_name}"  class="w-full btn btn-outline border-none hover:bg-[#15803d] hover:text-white">${category.category_name}
+    <button onclick="loadSingleTree('${category.category}')" id="plant-container-${category.category}"  class="w-full btn btn-outline border-none hover:bg-[#15803d] hover:text-white">${category.category_name}
     </button>
     `;
     categoryContainer.append(categoryDiv);
@@ -119,3 +119,4 @@ btn.addEventListener("click", function allTreeBtn() {
   loadCategory();
 });
 loadTrees();
+loadTreeDetail();
